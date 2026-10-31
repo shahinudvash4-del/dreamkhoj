@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111827">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>DreamKhoj — স্বপ্নের অর্থ খুঁজুন</title>
+<style>
+:root{--bg:#0f1724;--panel:#172235;--panel2:#202e45;--text:#f8fafc;--muted:#b7c4d8;--accent:#d6c3ff;--pink:#f1d5a8;--line:#34445e}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#263653 0,transparent 43%),radial-gradient(ellipse at 92% 18%,#30284a 0,transparent 36%),var(--bg);color:var(--text);font-family:"Hind Siliguri","Manrope",system-ui,sans-serif;min-height:100vh}
+.wrap{width:min(980px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}.brand{font-size:1.35rem;font-weight:800;letter-spacing:.2px}.brand span{color:var(--accent)}.nav small{color:var(--muted)}
+.hero{text-align:center;padding:38px 0 26px}.moon{font-size:3.4rem;filter:drop-shadow(0 0 22px #b99aff)}h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.18;margin:12px 0;background:linear-gradient(90deg,#fff,#d6c3ff,#f1d5a8);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:1.08rem;max-width:650px;margin:14px auto 0;line-height:1.8}
+.card{background:linear-gradient(145deg,rgba(27,40,60,.97),rgba(19,29,44,.97));border:1px solid var(--line);border-radius:24px;padding:clamp(18px,4vw,32px);box-shadow:0 18px 60px #08061155}
+label{display:block;font-weight:700;margin-bottom:10px}.hint{font-size:.9rem;color:var(--muted);margin:8px 0 18px}textarea{width:100%;min-height:155px;resize:vertical;border:1px solid #51416f;border-radius:16px;background:#101a29;color:var(--text);padding:16px;font:inherit;line-height:1.7;outline:none}textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px #c4a7ff22}.feelings{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 22px}.feel{border:1px solid #51416f;border-radius:999px;padding:9px 14px;background:#211a38;color:#e8defa;cursor:pointer;font:inherit}.feel.active{background:#d6c3ff;color:#1b2433;border-color:#d6c3ff;font-weight:700}.btn{border:0;border-radius:14px;background:linear-gradient(100deg,#d6c3ff,#f1d5a8);color:#1b2433;font:inherit;font-weight:800;padding:14px 20px;cursor:pointer;transition:transform .15s}.btn:hover{transform:translateY(-1px)}.btn:disabled{opacity:.45;cursor:not-allowed}.primary{width:100%;font-size:1.05rem}.result{display:none;margin-top:22px}.result.show{display:block;animation:rise .35s ease}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.result-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}.result-icon{font-size:2.4rem;width:64px;height:64px;display:grid;place-items:center;background:#283650;border-radius:18px}.result h2{margin:0 0 5px;font-size:1.5rem}.result .tag{color:#cbb8f8;font-size:.9rem}.result p{line-height:1.85;color:#e6def4}.result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.secondary{background:#25334a;color:#f5edff;border:1px solid #455773}.note{font-size:.84rem;color:#a99bc7;line-height:1.7;margin-top:18px}.section{margin:26px 0}.section h3{font-size:1.25rem;margin:0 0 14px}.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px}.chip{background:#1b2940;border:1px solid #34445e;border-radius:14px;padding:13px;color:#e9dfff;text-align:left;cursor:pointer;font:inherit}.chip:hover{border-color:#bba0ff}.chip span{display:block;font-size:1.4rem;margin-bottom:5px}.footer{text-align:center;color:#9f92bd;font-size:.85rem;padding:30px 0 40px}
+@media(max-width:600px){.nav{padding:18px 0}.nav small{font-size:.75rem}.hero{padding-top:25px}.card{border-radius:19px}.feel{padding:8px 11px;font-size:.92rem}.result-head{align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="nav"><div class="brand">☾ <span>Dream</span>Khoj</div><small>স্বপ্নের রহস্য খুঁজুন</small></header>
+<section class="hero"><div class="moon">🌙</div><h1>আপনার স্বপ্ন কী বলতে চায়?</h1><p>স্বপ্নটি লিখুন, অনুভূতি বেছে নিন—পেয়ে যান ভাবনার খোরাক—স্বপ্নের অর্থ ব্যক্তিভেদে আলাদা হতে পারে। নিজের মনের ভাবনা বুঝতে শুরু করুন।</p></section>
+<main>
+<section class="card">
+<label for="dream">আপনি কী স্বপ্ন দেখেছেন?</label>
+<textarea id="dream" placeholder="যেমন: আমি স্বপ্নে দেখেছি, আমি একটি বিশাল সমুদ্রের উপর দিয়ে উড়ছি..."></textarea>
+<div class="hint">যত বিস্তারিত লিখবেন, তত ভালোভাবে প্রাসঙ্গিক ব্যাখ্যা সাজানো যাবে।</div>
+<label>স্বপ্নে আপনার অনুভূতি কেমন ছিল?</label>
+<div class="feelings" id="feelings">
+<button class="feel active" data-feel="curious">✨ কৌতূহল</button><button class="feel" data-feel="happy">😊 আনন্দ</button><button class="feel" data-feel="fear">😨 ভয়</button><button class="feel" data-feel="sad">😔 দুঃখ</button><button class="feel" data-feel="peace">🕊️ শান্তি</button><button class="feel" data-feel="confused">🌀 বিভ্রান্তি</button>
+</div>
+<button class="btn primary" id="interpret" disabled>✨ স্বপ্নের ব্যাখ্যা খুঁজুন</button>
+<div class="result" id="result" aria-live="polite">
+<div class="result-head"><div class="result-icon" id="resultIcon">🌌</div><div><h2 id="resultTitle">আপনার স্বপ্নের সম্ভাব্য অর্থ</h2><div class="tag" id="resultTag"></div></div></div>
+<p id="resultText"></p><p id="resultFeeling"></p>
+<div class="result-actions"><button class="btn" id="share">ফলাফল শেয়ার করুন</button><button class="btn secondary" id="copy">লেখা কপি করুন</button><button class="btn secondary" id="again">নতুন স্বপ্ন লিখুন</button></div>
+</div>
+<p class="note">দ্রষ্টব্য: স্বপ্নের ব্যাখ্যা ব্যক্তিগত অভিজ্ঞতা ও সাংস্কৃতিক প্রতীকের উপর নির্ভর করে। এটি বৈজ্ঞানিক ভবিষ্যদ্বাণী বা চিকিৎসা-পরামর্শ নয়।</p>
+</section>
+<section class="section"><h3>🌠 সাধারণ স্বপ্নের প্রতীক</h3><div class="chips">
+<button class="chip" data-example="আমি স্বপ্নে দেখেছি আমি আকাশে উড়ছি।"><span>🪽</span>উড়ে যাওয়া</button>
+<button class="chip" data-example="আমি স্বপ্নে দেখেছি আমার দাঁত পড়ে যাচ্ছে।"><span>🦷</span>দাঁত পড়ে যাওয়া</button>
+<button class="chip" data-example="আমি স্বপ্নে দেখেছি আমি পানিতে ডুবে যাচ্ছি।"><span>🌊</span>পানি / ডুবে যাওয়া</button>
+<button class="chip" data-example="আমি স্বপ্নে দেখেছি একটি সাপ আমাকে তাড়া করছে।"><span>🐍</span>সাপ</button>
+<button class="chip" data-example="আমি স্বপ্নে দেখেছি আমি দৌড়াচ্ছি কিন্তু এগোতে পারছি না।"><span>🏃</span>দৌড়াতে না পারা</button>
+<button class="chip" data-example="আমি স্বপ্নে দেখেছি আমি পরীক্ষায় বসেছি কিন্তু কিছুই মনে পড়ছে না।"><span>📚</span>পরীক্ষা</button>
+</div></section>
+</main>
+
+
+<section class="section card" style="margin-top:26px">
+<h3>📖 স্বপ্ন সম্পর্কে বিস্তারিত জানুন</h3>
+<p style="color:#c4b8dc;line-height:1.8;margin-top:0">স্বপ্ন মানুষের ঘুম, স্মৃতি, আবেগ ও অভিজ্ঞতার সঙ্গে জড়িত একটি স্বাভাবিক অভিজ্ঞতা। নিচের তথ্যগুলো সাধারণ বৈজ্ঞানিক জ্ঞানভিত্তিক; ব্যক্তিগত স্বপ্নের নির্দিষ্ট অর্থ নিশ্চিত করে না।</p>
+<div style="display:grid;gap:18px;color:#e6def4;line-height:1.85">
+<div><h4 style="margin:0 0 6px;color:#d8c4ff">১. স্বপ্ন কী?</h4>ঘুমের সময় অনুভূতি, ছবি, শব্দ, চিন্তা বা গল্পের মতো অভিজ্ঞতাকে স্বপ্ন বলা হয়। কখনো স্বপ্ন খুব স্পষ্ট হয়, কখনো শুধু আবছা অনুভূতি বা বিচ্ছিন্ন দৃশ্য মনে থাকে।</div>
+<div><h4 style="margin:0 0 6px;color:#d8c4ff">২. ঘুমের পর্যায় ও স্বপ্ন</h4>ঘুমে NREM ও REM—দুই ধরনের পর্যায় থাকে এবং রাতজুড়ে এগুলো চক্রাকারে আসে। REM পর্যায়ে মস্তিষ্কের কার্যকলাপ তুলনামূলক সক্রিয় থাকে এবং এ সময়ের স্বপ্ন অনেকের কাছে জীবন্ত মনে হয়। তবে NREM ঘুমেও স্বপ্ন হতে পারে।</div>
+<div><h4 style="margin:0 0 6px;color:#d8c4ff">৩. আমরা কেন স্বপ্ন দেখি?</h4>এর পূর্ণ উত্তর এখনো জানা যায়নি। গবেষণায় স্মৃতি প্রক্রিয়াকরণ, আবেগ, শেখা, মস্তিষ্কের স্বতঃস্ফূর্ত কার্যকলাপ এবং সাম্প্রতিক অভিজ্ঞতার সঙ্গে স্বপ্নের সম্ভাব্য সম্পর্ক নিয়ে আলোচনা করা হয়। একক কোনো ব্যাখ্যা সব স্বপ্নের ক্ষেত্রে প্রযোজ্য নয়।</div>
+<div><h4 style="margin:0 0 6px;color:#d8c4ff">৪. স্বপ্নের সাধারণ ধরন</h4><ul style="padding-left:22px;margin:6px 0"><li><strong>সাধারণ স্বপ্ন:</strong> দৈনন্দিন অভিজ্ঞতা, স্মৃতি বা কল্পনার মিশ্র দৃশ্য।</li><li><strong>দুঃস্বপ্ন:</strong> ভয়, উদ্বেগ বা অস্বস্তি জাগানো স্বপ্ন, যা ঘুম ভাঙিয়ে দিতে পারে।</li><li><strong>পুনরাবৃত্ত স্বপ্ন:</strong> একই ধরনের দৃশ্য বা থিম বারবার দেখা।</li><li><strong>লুসিড ড্রিম:</strong> স্বপ্ন দেখার সময় বুঝতে পারা যে আপনি স্বপ্ন দেখছেন; কখনো স্বপ্নের ঘটনাকে কিছুটা প্রভাবিত করা যায়।</li><li><strong>জাগরণের কাছাকাছি স্বপ্ন:</strong> ঘুমাতে যাওয়ার সময় বা ঘুম ভাঙার সময় সংক্ষিপ্ত ছবি, শব্দ বা অনুভূতি দেখা/শোনা।</li></ul></div>
+<div><h4 style="margin:0 0 6px;color:#d8c4ff">৫. পরিচিত স্বপ্নের থিম</h4>উড়ে যাওয়া, পড়ে যাওয়া, তাড়া খাওয়া, পরীক্ষা দেওয়া, দাঁত পড়ে যাওয়া, পানি, সাপ, পুরোনো বাড়ি বা পরিচিত মানুষ—এ ধরনের থিম অনেকের স্বপ্নে আসে। এগুলোর নির্দিষ্ট, সর্বজনীন অর্থ প্রমাণিত নয়। আপনার ব্যক্তিগত স্মৃতি, সংস্কৃতি ও স্বপ্নের অনুভূতি বিবেচনা করে ভাবুন।</div>
+<div><h4 style="margin:0 0 6px;color:#d8c4ff">৬. দুঃস্বপ্ন ও মানসিক চাপ</h4>চাপ, উদ্বেগ, ঘুমের অনিয়ম, অসুস্থতা বা কিছু ওষুধের সঙ্গে দুঃস্বপ্নের সম্পর্ক থাকতে পারে। মাঝে মাঝে দুঃস্বপ্ন দেখা সাধারণ ঘটনা। কিন্তু ঘন ঘন দুঃস্বপ্নে ঘুম বা দৈনন্দিন জীবন ব্যাহত হলে স্বাস্থ্য-পেশাজীবীর সঙ্গে কথা বলা উপকারী হতে পারে।</div>
+<div><h4 style="margin:0 0 6px;color:#d8c4ff">৭. স্বপ্ন মনে রাখার উপায়</h4><ul style="padding-left:22px;margin:6px 0"><li>ঘুম থেকে উঠেই স্বপ্নের নোট লিখুন বা ভয়েস রেকর্ড করুন।</li><li>স্বপ্নের স্থান, মানুষ, ঘটনা ও অনুভূতি আলাদা করে লিখুন।</li><li>নিয়মিত ঘুমের সময় বজায় রাখুন।</li><li>স্বপ্ন মনে না থাকলেও নিজেকে চাপ দেবেন না—এটি স্বাভাবিক।</li></ul></div>
+<div><h4 style="margin:0 0 6px;color:#d8c4ff">৮. স্বপ্ন নিয়ে প্রচলিত ভুল ধারণা</h4><ul style="padding-left:22px;margin:6px 0"><li>স্বপ্নের প্রতিটি প্রতীকের একটিই নির্দিষ্ট অর্থ আছে—এমন নয়।</li><li>স্বপ্ন ভবিষ্যৎ নির্ভুলভাবে বলে দেয়—এমন নির্ভরযোগ্য প্রমাণ নেই।</li><li>স্বপ্নে কোনো ঘটনা দেখলেই বাস্তবে সেটি ঘটবে—এমন সিদ্ধান্ত নেওয়া উচিত নয়।</li><li>স্বপ্নের ব্যাখ্যা রোগ নির্ণয় বা চিকিৎসার বিকল্প নয়।</li></ul></div>
+<div><h4 style="margin:0 0 6px;color:#d8c4ff">৯. স্বপ্নের ডায়েরি কীভাবে রাখবেন</h4>তারিখ, ঘুম থেকে ওঠার সময়, স্বপ্নের সংক্ষিপ্ত বিবরণ, প্রধান অনুভূতি এবং সাম্প্রতিক জীবনের উল্লেখযোগ্য ঘটনা লিখুন। কয়েক সপ্তাহ পর নিজের স্বপ্নে পুনরাবৃত্ত বিষয় বা অনুভূতি খুঁজে দেখতে পারেন।</div>
+</div>
+<p class="note">তথ্য-সতর্কতা: এই পৃষ্ঠাটি সাধারণ শিক্ষামূলক তথ্য দেয়, ব্যক্তিগত চিকিৎসা-পরামর্শ নয়। স্বপ্নের গবেষণা চলমান; নতুন গবেষণায় ব্যাখ্যা আরও পরিমার্জিত হতে পারে।</p>
+<div class="result-actions" style="margin-top:18px">
+<button class="btn" id="shareDreamInfo">📤 স্বপ্নের তথ্য শেয়ার করুন</button>
+<button class="btn secondary" id="copyDreamInfo">তথ্য কপি করুন</button>
+</div>
+</section>
+
+<footer class="footer">DreamKhoj · আপনার স্বপ্ন, আপনার অনুভূতি, আপনার গল্প<br><span style="display:inline-block;margin-top:8px;color:#c4b8dc">Created by MD. SHAHIN HOSSAIN</span></footer>
+</div>
+<script>
+const dream=document.getElementById('dream'), interpret=document.getElementById('interpret'), result=document.getElementById('result');
+let feeling='curious';
+document.querySelectorAll('.feel').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.feel').forEach(x=>x.classList.remove('active'));b.classList.add('active');feeling=b.dataset.feel;}));
+dream.addEventListener('input',()=>{interpret.disabled=!dream.value.trim();});
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{dream.value=b.dataset.example;interpret.disabled=false;dream.focus();}));
+const interpretations=[
+{keys:['উড়','আকাশ','পাখি'],icon:'🪽',title:'স্বাধীনতা ও নতুন সম্ভাবনা',tag:'উড়ে যাওয়া',text:'উড়ে যাওয়ার স্বপ্ন অনেক সময় স্বাধীনতা, সীমাবদ্ধতা পেরোনোর ইচ্ছা বা নতুন সম্ভাবনার প্রতীক হিসেবে দেখা হয়। হয়তো আপনি জীবনের কোনো বিষয়ে আরও স্বাধীনভাবে এগোতে চাইছেন।'},
+{keys:['দাঁত','দাঁত পড়ে'],icon:'🦷',title:'পরিবর্তন বা অনিশ্চয়তা',tag:'দাঁত পড়ে যাওয়া',text:'দাঁত নিয়ে স্বপ্নকে কখনো পরিবর্তন, আত্মবিশ্বাস, চেহারা বা যোগাযোগ নিয়ে ভাবনার প্রতীক হিসেবে ব্যাখ্যা করা হয়। সাম্প্রতিক কোনো পরিবর্তন আপনাকে ভাবাচ্ছে কি না, খেয়াল করতে পারেন।'},
+{keys:['পানি','সমুদ্র','নদী','ডুব'],icon:'🌊',title:'অনুভূতি ও মনের গভীরতা',tag:'পানি',text:'পানি স্বপ্নে আবেগ, মানসিক অবস্থা বা জীবনের পরিবর্তনের প্রতীক হতে পারে। শান্ত পানি প্রশান্তির অনুভূতি, আর উত্তাল পানি চাপ বা অস্থিরতার সঙ্গে সম্পর্কিত হতে পারে।'},
+{keys:['সাপ'],icon:'🐍',title:'সতর্কতা, ভয় বা রূপান্তর',tag:'সাপ',text:'সাপের স্বপ্নের অর্থ সংস্কৃতি ও ব্যক্তিগত অভিজ্ঞতা অনুযায়ী বদলে যায়। এটি ভয়, সতর্কতা, পরিবর্তন কিংবা নতুনভাবে বেড়ে ওঠার প্রতীক হতে পারে।'},
+{keys:['দৌড়','তাড়া','পালাচ্ছি'],icon:'🏃',title:'চাপ বা এড়িয়ে চলা',tag:'তাড়া খাওয়া / দৌড়',text:'কেউ তাড়া করছে বা দৌড়াতে পারছেন না—এমন স্বপ্ন কখনো চাপ, দায়িত্ব বা কোনো পরিস্থিতি এড়িয়ে যাওয়ার অনুভূতির সঙ্গে যুক্ত হতে পারে। কোন বিষয়টি আপনাকে চাপে রাখছে তা ভাবুন।'},
+{keys:['পরীক্ষা','স্কুল','কলেজ'],icon:'📚',title:'নিজেকে যাচাই করার অনুভূতি',tag:'পরীক্ষা',text:'পরীক্ষার স্বপ্ন অনেক সময় প্রস্তুতি, প্রত্যাশা, দায়িত্ব বা নিজের সক্ষমতা নিয়ে উদ্বেগের প্রতীক হতে পারে—বিশেষ করে জীবনে কোনো মূল্যায়ন বা সিদ্ধান্ত সামনে থাকলে।'},
+{keys:['মৃত','মৃত্যু','কবর'],icon:'🕯️',title:'সমাপ্তি ও নতুন অধ্যায়',tag:'মৃত্যু বা বিদায়',text:'মৃত্যু বা বিদায়ের স্বপ্নকে আক্ষরিক ভবিষ্যদ্বাণী হিসেবে নেওয়া উচিত নয়। প্রতীকীভাবে এটি কোনো অধ্যায়ের সমাপ্তি, পরিবর্তন বা পুরোনো অভ্যাস ছেড়ে দেওয়ার ভাবনা বোঝাতে পারে।'},
+{keys:['বিয়ে','বিবাহ'],icon:'💍',title:'সম্পর্ক ও অঙ্গীকার',tag:'বিয়ে',text:'বিয়ের স্বপ্ন সম্পর্ক, অঙ্গীকার, নতুন দায়িত্ব বা জীবনের দুই দিককে একত্র করার ভাবনার প্রতীক হতে পারে। এর অর্থ আপনার বর্তমান পরিস্থিতির উপর নির্ভর করে।'},
+{keys:['আগুন','জ্বল'],icon:'🔥',title:'তীব্র আবেগ বা শক্তি',tag:'আগুন',text:'আগুন কখনো তীব্র আবেগ, রাগ, অনুপ্রেরণা বা রূপান্তরের প্রতীক হতে পারে। স্বপ্নে আগুন দেখে আপনার কেমন লেগেছিল, সেটি ব্যাখ্যার জন্য গুরুত্বপূর্ণ।'},
+{keys:['বৃষ্টি'],icon:'🌧️',title:'আবেগের মুক্তি বা নবায়ন',tag:'বৃষ্টি',text:'বৃষ্টি স্বপ্নে আবেগ, স্বস্তি, পরিশুদ্ধি বা নতুন শুরুর প্রতীক হিসেবে দেখা যেতে পারে। বৃষ্টির সময় আপনার অনুভূতি ব্যাখ্যাকে ব্যক্তিগতভাবে অর্থবহ করতে পারে।'}
+];
+const feelingText={curious:'আপনার কৌতূহল হয়তো স্বপ্নটির অর্থ খুঁজতে এবং নিজের অভিজ্ঞতা বুঝতে সাহায্য করছে।',happy:'স্বপ্নের আনন্দময় অনুভূতি আপনার আশা, তৃপ্তি বা ইতিবাচক প্রত্যাশার সঙ্গে সম্পর্কিত হতে পারে।',fear:'ভয়ের অনুভূতি কখনো বাস্তব জীবনের চাপ বা অনিশ্চয়তার প্রতিফলন হতে পারে।',sad:'দুঃখের অনুভূতি কোনো স্মৃতি, অপূর্ণতা বা আবেগ নিয়ে ভাবার সুযোগ দিতে পারে।',peace:'শান্ত অনুভূতি নিরাপত্তা, গ্রহণযোগ্যতা বা মানসিক প্রশান্তির প্রতীক হতে পারে।',confused:'বিভ্রান্তি হয়তো কোনো সিদ্ধান্ত বা পরিস্থিতি নিয়ে আপনার মনের দ্বিধাকে প্রতিফলিত করছে।'};
+let lastText='';
+interpret.addEventListener('click',()=>{const text=dream.value.trim();if(!text)return;const lower=text.toLowerCase();let item=interpretations.find(x=>x.keys.some(k=>lower.includes(k)));if(!item)item={icon:'🌌',title:'নিজের অনুভূতির দিকে মন দিন',tag:'ব্যক্তিগত প্রতিফলন',text:'স্বপ্নের নির্দিষ্ট প্রতীক সবার জন্য একই অর্থ বহন করে না। আপনার স্বপ্নের মানুষ, জায়গা ও ঘটনা—কোনটি সবচেয়ে বেশি মনে দাগ কেটেছে, এবং তা আপনার বর্তমান জীবনের সঙ্গে কীভাবে যুক্ত হতে পারে, ভেবে দেখুন।'};document.getElementById('resultIcon').textContent=item.icon;document.getElementById('resultTitle').textContent=item.title;document.getElementById('resultTag').textContent='প্রতীক: '+item.tag;document.getElementById('resultText').textContent=item.text;document.getElementById('resultFeeling').textContent=feelingText[feeling];lastText='DreamKhoj — '+item.title+'\n'+item.text+'\n'+feelingText[feeling]+'\n\nএটি প্রতীকী ব্যাখ্যা, নিশ্চিত ভবিষ্যদ্বাণী নয়।';result.classList.add('show');result.scrollIntoView({behavior:'smooth',block:'nearest'});});
+document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(lastText);document.getElementById('copy').textContent='কপি হয়েছে ✓';}catch(e){alert(lastText);}});
+document.getElementById('share').addEventListener('click',async()=>{if(navigator.share){try{await navigator.share({title:'DreamKhoj — স্বপ্নের ব্যাখ্যা',text:lastText});}catch(e){}}else{try{await navigator.clipboard.writeText(lastText);alert('ফলাফল কপি হয়েছে। এখন শেয়ার করুন!');}catch(e){alert(lastText);}}});
+document.getElementById('again').addEventListener('click',()=>{dream.value='';interpret.disabled=true;result.classList.remove('show');dream.focus();window.scrollTo({top:0,behavior:'smooth'});});
+const infoShareText='DreamKhoj — স্বপ্ন সম্পর্কে জানুন\\nস্বপ্ন, ঘুমের পর্যায়, দুঃস্বপ্ন, স্বপ্ন মনে রাখার কৌশল এবং স্বপ্ন নিয়ে প্রচলিত ভুল ধারণা সম্পর্কে শিক্ষামূলক তথ্য পড়ুন।\\nস্বপ্নের ব্যাখ্যা ব্যক্তিভেদে আলাদা হতে পারে; এটি নিশ্চিত ভবিষ্যদ্বাণী নয়।';
+document.getElementById('shareDreamInfo').addEventListener('click',async()=>{const data={title:'DreamKhoj — স্বপ্ন সম্পর্কে জানুন',text:infoShareText,url:location.href};if(navigator.share){try{await navigator.share(data);}catch(e){}}else{try{await navigator.clipboard.writeText(infoShareText+'\\n'+location.href);alert('শেয়ার করার তথ্য ও ওয়েবসাইটের লিংক কপি হয়েছে।');}catch(e){alert(infoShareText+'\\n'+location.href);}}});
+document.getElementById('copyDreamInfo').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(infoShareText+'\\n'+location.href);document.getElementById('copyDreamInfo').textContent='কপি হয়েছে ✓';}catch(e){alert(infoShareText+'\\n'+location.href);}});
+
+</script>
+</body>
+</html>
